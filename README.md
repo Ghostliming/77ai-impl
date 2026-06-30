@@ -2,6 +2,14 @@
 
 基于 [html-ppt](https://github.com/lewislulu/html-ppt-skill) 构建的 **22 页**内部汇报演示稿。
 
+## 在线访问（GitHub Pages）
+
+推送 `main` 分支后自动部署：
+
+**https://ghostliming.github.io/77ai-impl/**
+
+首次启用：仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
+
 ## 打开方式
 
 在 `html` 目录下启动本地服务后访问：
@@ -44,10 +52,21 @@ html/
 |---|---|---|---|
 | 封面 P1 | 带文字 Logo | — | bg-cover.png |
 | 内容 P2–21 | 图标 Logo（加大） | Slogan 图 | bg-content.png 低亮度主视觉 + 深色遮罩 |
-| 收尾 P22 | 图标 Logo | Slogan 图 | bg-content.png 低亮度主视觉 + 机制链路 |
+| 支撑机制 P22 | 图标 Logo | Slogan 图 | bg-content.png 低亮度主视觉 + 机制链路 |
 
 ## 响应式
 
 - 默认按 16:9 全屏演示优化
 - ≤1280px / ≤1024px：栅格列数自适应（Pad 横竖屏）
 - ≤768px：单列布局、缩小边距
+
+## GitHub Pages 部署说明
+
+| 项 | 说明 |
+|---|---|
+| 工作流 | `.github/workflows/deploy-pages.yml` |
+| 触发 | `push` 到 `main`，或 Actions 页手动 **Run workflow** |
+| 静态根目录 | 仓库根目录（`index.html` 即入口） |
+| Jekyll | 根目录 `.nojekyll` 禁用 Jekyll，避免 `vendor/` 等目录被忽略 |
+
+资源路径均为相对引用，适配 Pages 子路径 `/77ai-impl/` 托管。
