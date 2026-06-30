@@ -1,0 +1,152 @@
+/* theme: q7hub-corporate — 企企内部汇报 · 深色蓝紫 */
+:root {
+  --bg: #080816;
+  --bg-soft: #0c0e1e;
+  --surface: rgba(18, 39, 74, 0.72);
+  --surface-2: rgba(13, 25, 50, 0.85);
+  --border: rgba(96, 126, 184, 0.28);
+  --border-strong: rgba(96, 126, 184, 0.48);
+  --text-1: #ffffff;
+  --text-2: #e0ecff;
+  --text-3: #a4b8d8;
+  --accent: #488cff;
+  --accent-2: #43daf5;
+  --accent-3: #9a74ff;
+  --good: #40cf91;
+  --warn: #f5b355;
+  --bad: #ff7777;
+  --grad: linear-gradient(135deg, #43daf5 0%, #488cff 45%, #9a74ff 100%);
+  --grad-soft: linear-gradient(135deg, rgba(67, 218, 245, 0.12), rgba(154, 116, 255, 0.12));
+  --radius: 8px;
+  --radius-sm: 6px;
+  --radius-lg: 12px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.45);
+  --font-sans: 'Inter', 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --font-display: 'Inter', 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --letter-tight: 0;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* deck chrome — 单一 gutter，header / 正文 / 页脚左对齐 */
+  --content-gutter: clamp(40px, 4.2vw, 64px);
+  --slide-pad-x: var(--content-gutter);
+  --slide-pad-y: clamp(52px, 5.5vh, 72px);
+  --slide-pad-bottom: clamp(24px, 3vh, 36px);
+  --brand-top: clamp(20px, 2.5vh, 32px);
+  --brand-side: var(--content-gutter);
+  --content-top: clamp(112px, 13vh, 148px);
+}
+
+html, body {
+  background: var(--bg);
+}
+
+.deck {
+  background: var(--bg);
+}
+
+.slide {
+  padding: var(--slide-pad-y) var(--slide-pad-x) var(--slide-pad-bottom);
+  justify-content: flex-start;
+}
+
+h1.title, .h1 {
+  font-size: clamp(36px, 4.2vw, 56px);
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+h2.title, .h2 {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+h3, .h3 {
+  font-size: clamp(18px, 2vw, 26px);
+}
+
+h4, .h4 {
+  font-size: clamp(14px, 1.4vw, 18px);
+}
+
+.lede {
+  font-size: clamp(16px, 1.6vw, 22px);
+  color: var(--text-2);
+  max-width: 68ch;
+}
+
+.kicker {
+  color: var(--accent-2);
+  font-size: clamp(11px, 1vw, 13px);
+}
+
+.eyebrow {
+  color: var(--text-3);
+}
+
+.gradient-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+}
+
+.card-soft {
+  background: var(--surface-2);
+}
+
+.card-accent {
+  border-top: 2px solid var(--accent);
+}
+
+.pill {
+  background: rgba(72, 140, 255, 0.12);
+  color: var(--text-2);
+  border-color: var(--border);
+}
+
+.pill-accent {
+  background: rgba(67, 218, 245, 0.14);
+  color: var(--accent-2);
+  border-color: rgba(67, 218, 245, 0.35);
+}
+
+.pill-good {
+  background: rgba(64, 207, 145, 0.14);
+  color: var(--good);
+  border-color: rgba(64, 207, 145, 0.35);
+}
+
+.pill-warn {
+  background: rgba(245, 179, 85, 0.14);
+  color: var(--warn);
+  border-color: rgba(245, 179, 85, 0.35);
+}
+
+.pill-plan {
+  background: rgba(164, 184, 216, 0.12);
+  color: var(--text-3);
+  border-color: var(--border);
+}
+
+.divider-accent {
+  background: var(--grad);
+  height: 3px;
+  width: 56px;
+}
+
+.progress-bar > span {
+  background: var(--grad);
+}
+
+.dim { color: var(--text-2); }
+.dim2 { color: var(--text-3); }
