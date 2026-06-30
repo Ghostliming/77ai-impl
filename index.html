@@ -83,7 +83,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">本场汇报交付</span>
+      <span class="section-label"><span class="section-index">1</span>本场交付内容</span>
       <h2 class="slide-title">交付四个经营判断，而不是 AI 概念展示</h2>
     </header>
     <div class="deliver-grid">
@@ -119,7 +119,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">企企 AI 战略定位</span>
+      <span class="section-label"><span class="section-index">2</span>企企 AI 战略定位</span>
       <h2 class="slide-title">AI 正在进入真实业务过程，支撑经营决策与执行</h2>
     </header>
     <div class="point-cols">
@@ -140,7 +140,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">企企 AI 战略定位</span>
+      <span class="section-label"><span class="section-index">2.1</span>业务过程演进</span>
       <h2 class="slide-title">从聊天框，到业务执行过程中的 AI</h2>
     </header>
     <div class="flow-track">
@@ -163,7 +163,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head" style="margin-bottom:clamp(8px,1vh,14px)">
-      <span class="section-label">AI 平台与底座</span>
+      <span class="section-label"><span class="section-index">3</span>AI 平台与底座</span>
       <h2 class="slide-title">智元 AI PaaS 是企企 AI 落地的能力底座</h2>
     </header>
     <div class="arch-visual">
@@ -188,7 +188,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">AI 平台与底座</span>
+      <span class="section-label"><span class="section-index">3.1</span>ERP 集成与动作</span>
       <h2 class="slide-title">AI 进入 ERP，要落到对象、流程和动作</h2>
     </header>
     <div class="cascade-flow">
@@ -215,7 +215,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">AI 解决方案能力矩阵</span>
+      <span class="section-label"><span class="section-index">4</span>AI 解决方案能力矩阵</span>
       <h2 class="slide-title">客户面与实施面：AI 进入两类业务过程</h2>
     </header>
     <div class="dual-panel">
@@ -234,8 +234,8 @@
   <footer class="slide-footer"><span>AI 解决方案能力矩阵</span><span class="slide-number" data-current="9" data-total="22"></span></footer>
 </section>
 
-<!-- P10 客户面三角 -->
-<section class="slide slide--content" data-title="客户面三角">
+<!-- P10 客户面业务闭环 -->
+<section class="slide slide--content" data-title="客户面业务闭环">
   <div class="slide-bg" aria-hidden="true"></div>
   <header class="brand-header">
     <img class="brand-logo brand-logo--icon" src="assets/images/logo-icon.png" alt="企企">
@@ -243,20 +243,55 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">AI 解决方案能力矩阵</span>
-      <h2 class="slide-title">客户面围绕录入、审核、分析三个业务动作</h2>
+      <span class="section-label"><span class="section-index">4.1</span>客户面业务闭环</span>
+      <h2 class="slide-title">客户面围绕录入、审核、分析形成业务闭环</h2>
     </header>
     <div class="triangle-wrap">
-      <div class="triangle-diagram">
-        <div class="tri-node tri-node--top">录入</div>
-        <div class="tri-node tri-node--bl">审核</div>
-        <div class="tri-node tri-node--br">分析</div>
-        <div class="tri-center">ERP 真实数据</div>
+      <div class="customer-loop" aria-label="录入、审核、分析业务闭环">
+        <svg class="loop-lines" viewBox="0 0 520 360" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="loopStroke" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="var(--accent-2)" stop-opacity="0.92" />
+              <stop offset="52%" stop-color="var(--accent)" stop-opacity="0.78" />
+              <stop offset="100%" stop-color="var(--good)" stop-opacity="0.9" />
+            </linearGradient>
+            <marker id="loopArrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+              <path d="M0,0 L8,4.5 L0,9 Z" fill="var(--accent-2)" opacity="0.86" />
+            </marker>
+          </defs>
+          <path class="loop-path loop-path--a" d="M260 94 C190 126 128 190 104 264" marker-end="url(#loopArrow)" />
+          <path class="loop-path loop-path--b" d="M140 304 C225 342 330 342 416 304" marker-end="url(#loopArrow)" />
+          <path class="loop-path loop-path--c" d="M420 264 C394 188 330 124 260 94" marker-end="url(#loopArrow)" />
+        </svg>
+        <article class="loop-node loop-node--input">
+          <span class="loop-num">01</span>
+          <h3>录入</h3>
+          <p>外部资料与业务动作进入 ERP</p>
+        </article>
+        <article class="loop-node loop-node--review">
+          <span class="loop-num">02</span>
+          <h3>审核</h3>
+          <p>规则、知识与权限前置校验</p>
+        </article>
+        <article class="loop-node loop-node--analysis">
+          <span class="loop-num">03</span>
+          <h3>分析</h3>
+          <p>基于可信数据形成经营洞察</p>
+        </article>
+        <span class="loop-arrow loop-arrow--input-review">进入校验</span>
+        <span class="loop-arrow loop-arrow--review-analysis">可信数据</span>
+        <span class="loop-arrow loop-arrow--analysis-input">反馈口径</span>
+        <div class="loop-core">
+          <span>共同底座</span>
+          <strong>ERP 真实数据</strong>
+          <p>对象 · 流程 · 权限</p>
+        </div>
+        <div class="loop-feedback">经营结果反哺规则与数据口径</div>
       </div>
       <ul class="action-list">
-        <li><h4>录入</h4><p>AI 录单 · 表单助手 · 外部文档进入 ERP</p></li>
-        <li><h4>审核</h4><p>AI 预审 · 知识库 · NL 规则训练（演进）</p></li>
-        <li><h4>分析</h4><p>AI 洞察 · 项目助手 · 报表二次洞察 · Skill 拓展</p></li>
+        <li><span class="action-role">数据入口</span><h4>录入</h4><p>AI 录单 · 表单助手 · 外部文档进入 ERP</p></li>
+        <li><span class="action-role">风险前置</span><h4>审核</h4><p>AI 预审 · 知识库 · NL 规则训练（演进）</p></li>
+        <li><span class="action-role">经营输出</span><h4>分析</h4><p>AI 洞察 · 项目助手 · 报表二次洞察 · Skill 拓展</p></li>
       </ul>
     </div>
   </div>
@@ -272,7 +307,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">AI 解决方案能力矩阵</span>
+      <span class="section-label"><span class="section-index">4.2</span>录入与审核</span>
       <h2 class="slide-title">外部文档进入系统，问题在提交前解决</h2>
     </header>
     <div class="dual-panel">
@@ -308,7 +343,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">AI 解决方案能力矩阵</span>
+      <span class="section-label"><span class="section-index">4.3</span>项目经营分析</span>
       <h2 class="slide-title">项目经营分析：从项目数据到经营判断</h2>
     </header>
     <p class="lead-quote" style="margin-bottom:clamp(12px,1.5vh,20px)"><strong>项目助手</strong>是岗位助手系列起点 · 从项目工作台进入，不是泛聊</p>
@@ -330,7 +365,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head slide-head--compact">
-      <span class="section-label">AI 解决方案能力矩阵</span>
+      <span class="section-label"><span class="section-index">4.4</span>实施面交付</span>
       <h2 class="slide-title">实施面：把个性化规则转成可交付配置</h2>
     </header>
     <p class="lead-quote impl-lead"><strong>实施面 AI 的价值不在替代顾问判断，</strong>而是把规则描述、脚本生成、校验发布压到同一条交付链上。</p>
@@ -388,7 +423,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">行业落地案例</span>
+      <span class="section-label"><span class="section-index">5</span>行业落地案例</span>
       <h2 class="slide-title">真实客户需求已经进入企企方案承接链路</h2>
     </header>
     <div class="case-proof">
@@ -423,7 +458,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">行业落地案例 · 厦门兆慧</span>
+      <span class="section-label"><span class="section-index">5.1</span>厦门兆慧 · 需求主线</span>
       <h2 class="slide-title">8 项 AI 需求被收敛成三条可承接主线</h2>
     </header>
     <div class="demand-board">
@@ -462,7 +497,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">行业落地案例 · 厦门兆慧</span>
+      <span class="section-label"><span class="section-index">5.2</span>厦门兆慧 · 经营分析</span>
       <h2 class="slide-title">项目健康度：从数据底表走到经营分析初版</h2>
     </header>
     <div class="case-path">
@@ -487,7 +522,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">行业落地案例 · 某新药开发头部客户</span>
+      <span class="section-label"><span class="section-index">5.3</span>新药客户 · 安全流程</span>
       <h2 class="slide-title">AI 进入工程安全业务流程</h2>
     </header>
     <div class="scenario-grid">
@@ -520,7 +555,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">行业落地案例 · 某新药开发头部客户</span>
+      <span class="section-label"><span class="section-index">5.4</span>新药客户 · 质量流程</span>
       <h2 class="slide-title">AI 进入质量管控业务流程</h2>
     </header>
     <div class="scenario-grid">
@@ -554,7 +589,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">发展规划与路线图</span>
+      <span class="section-label"><span class="section-index">6</span>发展规划与路线图</span>
       <h2 class="slide-title">2026 H2 重点方向</h2>
     </header>
     <div class="point-cols">
@@ -575,7 +610,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">发展规划与路线图</span>
+      <span class="section-label"><span class="section-index">6.1</span>助手矩阵</span>
       <h2 class="slide-title">项目助手只是起点，走向岗位 / 领域助手矩阵</h2>
     </header>
     <ul class="strip-list">
@@ -598,7 +633,7 @@
   </header>
   <div class="slide-body">
     <header class="slide-head">
-      <span class="section-label">发展规划与路线图</span>
+      <span class="section-label"><span class="section-index">6.2</span>Roadmap</span>
       <h2 class="slide-title">区分已发布、在研和规划</h2>
     </header>
     <div class="roadmap">
@@ -622,9 +657,7 @@
   </header>
   <div class="slide-body">
     <div class="closing-block">
-      <header class="slide-head" style="text-align:center;margin-bottom:clamp(16px,2vh,24px)">
-        <h2 class="closing-title gradient-text">区域 AI 落地需要总部支撑机制</h2>
-      </header>
+      <h2 class="closing-title gradient-text">区域 AI 落地需要总部支撑机制</h2>
       <div class="support-flow">
         <span>区域识别场景</span>
         <span>需求澄清</span>
